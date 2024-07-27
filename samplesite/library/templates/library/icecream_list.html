@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список мороженого</title>
+</head>
+<body>
+    <h2>Список мороженого</h2>
+    <ul>
+        {% for icecream in icecreams %}
+            <li>{{ icecream.flavor }} - {{ icecream.price }} тг.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'library:icecream-add' %}">Добавить новый вкус</a>
+</body>
+</html>
+

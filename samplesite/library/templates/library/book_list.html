@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список книг</title>
+</head>
+<body>
+    <h2>Список книг</h2>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }} (ISBN: {{ book.isbn }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'library:book-create' %}">Добавить новую книгу</a>
+</body>
+</html>
